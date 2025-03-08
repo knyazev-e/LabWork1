@@ -48,7 +48,7 @@ public:
     void gaussianBlur();
 
 private:
-    Pixel **pixels;
+    Pixel **pixels = nullptr;
     FileHeader file_header;
     InfoHeader info_header;
 };

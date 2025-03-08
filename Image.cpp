@@ -9,6 +9,10 @@ Image::~Image() {
 }
 
 bool Image::readFile(const std::string& path) {
+    if (pixels != nullptr) {
+        clearMemory();
+    }
+
     std::ifstream file(path, std::ios::binary);
     if (!file) {
         std::cout << "Failed to open the file." << std::endl;
@@ -91,6 +95,7 @@ void Image::rotateClockwise() {
     clearMemory();
     pixels = rotated;
     std::swap(info_header.width, info_header.height);
+    rotated = nullptr;
 }
 
 void Image::rotateCounterClockwise() {
@@ -108,6 +113,7 @@ void Image::rotateCounterClockwise() {
     clearMemory();
     pixels = rotated;
     std::swap(info_header.width, info_header.height);
+    rotated = nullptr;
 }
 
 void Image::gaussianBlur() {
