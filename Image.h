@@ -1,3 +1,7 @@
+/* Kniazeva Eva Andreevna
+st128104@student.spbu.ru 
+labwork 1 */
+
 #ifndef IMAGE_H
 #define IMAGE_H
 
