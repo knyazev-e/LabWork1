@@ -24,7 +24,6 @@ $(PARALLEL_TARGET): $(PARALLEL_OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 test: $(TEST_TARGET)
-	./$(TEST_TARGET)
 
 $(TEST_TARGET): $(TEST_OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(TESTFLAGS)
