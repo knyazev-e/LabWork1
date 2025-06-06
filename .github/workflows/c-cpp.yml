@@ -18,3 +18,5 @@ jobs:
     - name: tests
       working-directory: ./Testing
       run: ./tests
+    - name: clean
+      run: make clean
